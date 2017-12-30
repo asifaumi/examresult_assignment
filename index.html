@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/customs.css">
+    <title>Result finder</title>
+
+  </head>
+  <body>
+
+<!-- about us section -->
+    <section class="Result-finder-section">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-sm-12 col-xs-12">
+            <div class="heading">
+              <h1>Enter Your No. <br>& Get Your Result</h1>
+                <!-- Get result button -->
+                  <div class="result">
+                      <input type="number" id="marks" placeholder="enter your no." class="form-control">
+                      <h2></h2>
+                  </div>  
+              <button type="button" >Get Result</button>
+            </div>
+          </div>
+
+
+          <div class="col-sm-00 col-xs-12">
+            <div class="result">
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+   </section>
+
+<!-- about us section -->
+
+
+    <!-- Java script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+
+    $(function(){
+      $("button").click(
+        function(){
+
+          var marks=$("#marks").val()
+
+            if (marks >= 80){
+              $("h2").text("A");
+            }
+
+            else if (marks >= 70){
+              $("h2").text("B");
+            }
+            else if (marks >= 60){
+              $("h2").text("C");
+            }
+            else if (marks >= 50){
+              $("h2").text("D");
+            }
+            else {
+              $("h2").text("F");
+            }
+            
+        });
+
+  })
+
+</script>
+  </body>
+</html>
